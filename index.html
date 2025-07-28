@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>Simple Book Library</title>
+            <style>
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    display: flex;
+                }
+                li {
+                    padding: 1em;
+                    border-bottom: 1px solid #ccc;
+                }
+                li b, strong, p {
+                    display:block;
+                }
+                li img {
+                    width: 300px;
+                }
+                .navigation {
+                    background: #333;
+                    padding: 1em;
+                    display: flex;
+                }
+                .navigation a {
+                    color:white;
+                    margin-right: 1em;
+                    text-decoration: none;
+                }
+                .navigation li:hover {
+                    background: #000;
+                }
+            </style>
+        </head>
+        <body>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Fantasy</a></li>
+                <li><a href="#">Romance</a></li>
+                <li><a href="#">Sci-Fi</a></li>
+                <li><a href="#">Horror</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+
+            <h1>Book List</h1>
+            <ul>
+                <li><img src="images/DoH.png"><strong>Title: Defenders of Hagron</strong><strong>Author: Jetrich Khowanto</strong></li>
+                <li><img src="images/Inhuman.png"><strong>Title: Inhuman</strong><strong>Author: Jetrich Khowanto</strong></li>
+                <li><img src="images/Romance.png"><strong>Title: The Royal and the Rebel</strong><strong>Author: Jetrich Khowanto</strong></li>
+            </ul>
+        </body>
+    </html>
