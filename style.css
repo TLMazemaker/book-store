@@ -1,0 +1,32 @@
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+li {
+    padding: 1em;
+    /*border-bottom: 1px solid #ccc; */
+}
+li strong {
+    display:block;
+}
+li img {
+    width: 300px;
+    transition: transform 0.8s ease;
+}
+li img:hover {
+    transform: scale(1.05);
+}
+.navigation {
+    background: #333;
+    padding: 1em;
+    display: flex;
+}
+.navigation a {
+    color:white;
+    margin-right: 1em;
+    text-decoration: none;
+}
+.navigation li:hover {
+    background: #000;
+}
