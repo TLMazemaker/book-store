@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Simple Book Library">
+        <meta name="keywords" content="Book, Library, Novel">
+        <meta name="author" content="Jetrich Khowanto">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="images/logo.png">
+        <title>Defenders of Hagron</title>
+    </head>
+    <body>
+        <ul class="navigation">
+            <a href="index.html"><li>Home</li></a>
+            <a href="#"><li>About</li></a>
+            <a href="login.html"><li>Login</li></a>
+        </ul>
+
+        <h1>Defenders of Hagron</h1>
+
+        <ul>
+            <li><img src="images/DoH.png" alt="Defenders of Hagron" title="Fantasy Book"></li>
+            <li>
+                <strong style="font-size: 48px; font-family: 'Times New Roman', Times, serif; text-align: left;">Synopsis</strong>
+                <p style="text-align: justify;">When a mysterious watch transformed Jordy Thompson into an air-bending superhuman. How is he going to use it to keep the city of Hagron safe from malice. Most importantly, can he work with another stubborn earth-bending superwoman? Or are they forced to work against each other?</p>
+                <button onclick="openmodal()">Read now.</button>
+            </li>
+        </ul>
+
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <strong>Coming Soon...</strong>
+                <p>Stay tuned for this Book release...</p>
+                <button class="close-modal" onclick="closemodal()">Close</button>
+            </div>
+        </div>
+
+        <script>
+            const modal = document.getElementById("modal");
+            const modalContent = document.querySelector(".modal-content");
+
+            function hidemodal() {
+                modal.style.display="none";
+            }
+
+            function openmodal(){
+                modal.style.display="flex";
+                modal.style.textAlign="center";
+                modal.style.animation="modalFadeIn 0.3s ease";
+            }
+
+            function closemodal(){
+                modalContent.style.animation="modalFadeOut 0.3s ease";
+                setTimeout(hidemodal, 300);
+            }
+        </script>
+    </body>
+</html>
