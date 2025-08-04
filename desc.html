@@ -42,15 +42,20 @@
 
             function hidemodal() {
                 modal.style.display="none";
+                modal.content.style="";
             }
 
             function openmodal(){
                 modal.style.display="flex";
                 modal.style.textAlign="center";
+                modalContent.style.animation = "";
+                void modalContent.offsetWidth;
                 modal.style.animation="modalFadeIn 0.3s ease";
             }
 
             function closemodal(){
+                modalContent.style.animation = "";
+                void modalContent.offsetWidth;
                 modalContent.style.animation="modalFadeOut 0.3s ease";
                 setTimeout(hidemodal, 300);
             }
