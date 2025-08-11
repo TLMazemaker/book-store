@@ -1,3 +1,11 @@
+body {
+    background-image: url('images/bg_library.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 ul {
     list-style: none;
     padding: 0;
@@ -7,10 +15,24 @@ li {
     padding: 1em;
     /*border-bottom: 1px solid #ccc; */
 }
+
+li p {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 16px 20px;          
+    border-radius: 8px;        
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 li strong {
     display:block;
     text-align: center;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 16px 20px;
+    max-width: 300px;          
+    border-radius: 8px;        
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
+
 li img {
     width: 300px;
     transition: transform 0.8s ease;
@@ -56,6 +78,11 @@ li button:hover {
 
 h1 {
     margin-left: 1%;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 16px 20px;
+    max-width: 300px;          
+    border-radius: 8px;        
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .modal {
@@ -122,4 +149,18 @@ h1 {
         opacity: 0;
         transform: translateY(20px);
     }
+}
+
+.about-me {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 16px 20px;
+    max-width: 300px;          
+    border-radius: 8px;        
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
 }
