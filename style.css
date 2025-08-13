@@ -1,6 +1,6 @@
 body {
     background-image: url('images/bg_library.jpg');
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -27,8 +27,9 @@ li strong {
     display:block;
     text-align: center;
     background: rgba(255, 255, 255, 0.85);
-    padding: 16px 20px;
-    max-width: 300px;          
+    padding: 16px;
+    margin: 1%;
+    max-width: fit-content;
     border-radius: 8px;        
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -39,14 +40,17 @@ li img {
     transition: transform 0.8s ease;
     margin-bottom: 2%;
 }
+
 li img:hover {
     transform: scale(1.03);
 }
+
 .navigation {
     background: #333;
     padding: 1em;
     display: flex;
 }
+
 .navigation a {
     color:white;
     margin-right: 1em;
@@ -80,8 +84,8 @@ li button:hover {
 h1 {
     margin-left: 1%;
     background: rgba(255, 255, 255, 0.85);
-    padding: 16px 20px;
-    max-width: 300px;          
+    padding: 20px;
+    max-width: fit-content;
     border-radius: 8px;        
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -166,6 +170,3 @@ h1 {
     line-height: 1.4;
     text-align: justify;
 }
-
-
-
