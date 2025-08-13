@@ -11,6 +11,7 @@ ul {
     padding: 0;
     display: flex;
 }
+
 li {
     padding: 1em;
     /*border-bottom: 1px solid #ccc; */
@@ -65,6 +66,7 @@ li p {
     font-size: 24px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: justify;
+    max-height: fit-content;
 }
 
 li button {
@@ -74,6 +76,8 @@ li button {
     background: #6e5101;
     color: #ffffff;
     padding: 1.5%;
+    /* position: fixed; */
+    /* bottom: 50px; */
 }
 
 li button:hover {
@@ -169,4 +173,29 @@ h1 {
     font-size: 14px;
     line-height: 1.4;
     text-align: justify;
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.scroll-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.scroll-container li {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
 }
