@@ -1,3 +1,4 @@
+<!--https://forms.gle/xHoGxmgd6ifF2Yyn9-->
 <!DOCTYPE html>
     <html lang="en">
         <head>
@@ -23,12 +24,20 @@
             </ul>
 
             <h1>Book List</h1>
-            <ul>
-                <li><a href="desc.html"><img src="images/DoH.png" alt="Defenders of Hagron" title="Fantasy Book"></a><strong>Title: Defenders of Hagron</strong><strong>Author: Jetrich Khowanto</strong></li>
-                <li><a href="#"><img src="images/Inhuman.png" alt="Inhuman" title="Horror Book"></a><strong>Title: Inhuman</strong><strong>Author: T L Mazemaker</strong></li>
-                <li><a href="#"><img src="images/Romance.png" alt="The Dangerous Liaison" title="Romance Book"></a><strong>Title: The Dangerous Liaison</strong><strong>Author: Jetrich Khowanto</strong></li>
-                <li><a href="#"><img src="images/Dream.jpg" alt="Diary of a Lucid Dream" title="Sci-Fi Book"></a><strong>Title: Diary of a Lucid Dreamer</strong><strong>Author: Jetrich Khowanto</strong></li>
-            </ul>
+            <div class="scroll-container">
+                <ul>
+                    <li><a href="desc.html"><img src="images/DoH.png" alt="Defenders of Hagron" title="Fantasy Book"></a><strong>Title: Defenders of Hagron</strong><strong>Author: Jetrich Khowanto</strong></li>
+                    <li><a href="#"><img src="images/Inhuman.png" alt="Inhuman" title="Horror Book"></a><strong>Title: Inhuman</strong><strong>Author: Jetrich Khowanto</strong></li>
+                    <li><a href="#"><img src="images/Romance.png" alt="The Dangerous Liaison" title="Romance Book"></a><strong>Title: The Dangerous Liaison</strong><strong>Author: Jetrich Khowanto</strong></li>
+                    <li><a href="#"><img src="images/Dream.jpg" alt="Diary of a Lucid Dream" title="Otherworld Book"></a><strong>Title: Diary of a Lucid Dreamer</strong><strong>Author: Jetrich Khowanto</strong></li>
+                    <li><a href="#"><img src="images/Scifi.jpg" alt="The Lovelace Protocol" title="Sci-Fi Book"></a><strong>Title: The Lovelace Protocol</strong><strong>Author: Jetrich Khowanto</strong></li>
+                </ul>
+            </div>
+            <footer>
+                <p>Copyright &copy; <span id="year"></span> Jetrich Khowanto - All Rights Reserved -</p>
+            </footer>
+            <script>
+                document.getElementById("year").textContent = new Date().getFullYear();
+            </script>
         </body>
     </html>
-
