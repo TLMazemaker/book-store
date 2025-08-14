@@ -73,7 +73,7 @@ li button {
     border-radius: 4px;
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
-    background: #6e5101;
+    background: #333333;
     color: #ffffff;
     padding: 1.5%;
     /* position: fixed; */
@@ -81,7 +81,7 @@ li button {
 }
 
 li button:hover {
-    background: #d17f03;
+    background: #c7b700;
     cursor: pointer;
 }
 
@@ -248,3 +248,4 @@ footer {
     cursor: pointer;
     background: #c7b700;
 }
+
