@@ -199,3 +199,52 @@ footer {
 .scroll-container::-webkit-scrollbar {
     display: none;
 }
+
+.login-container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+}
+
+.login-form {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+    width: 300px;
+}
+
+.login-form h2 {
+    margin-bottom: 5%;
+}
+
+.login-form input {
+    width: 85%;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+.login-form input:hover {
+    cursor: pointer;
+    border: 1px solid #ab7605;
+}
+
+.login-form button {
+    width: 70%;
+    padding: 10px;
+    background: #333333;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    margin: 10%;
+}
+
+.login-form button:hover {
+    cursor: pointer;
+    background: #c7b700;
+}
