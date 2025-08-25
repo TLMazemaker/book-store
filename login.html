@@ -1,40 +1,257 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Simple Book Library">
-    <meta name="keywords" content="Book, Library, Novel">
-    <meta name="author" content="Jetrich Khowanto">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/logo.png">
-    <title>Login</title>
-    <style>
-        footer {
-            margin-top: 10%;
-        }
-    </style>
-</head>
-<body>
-    <ul class="navigation">
-        <a href="index.html"><li>Home</li></a>
-        <a href="about.html"><li>About</li></a>
-        <a href="login.html"><li>Login</li></a>
-    </ul>
-    <div class="login-container">
-        <form class="login-form">
-            <h2>Login</h2>
-            <input type="text" placeholder="Username" autocomplete="off" required>
-            <input type="password" placeholder="Password" required>
-            <button type="submit">Login</button>
-        </form>
-    </div>
-    <footer>
-        <p>Copyright &copy; <span id="year"></span> Jetrich Khowanto - All Rights Reserved -</p>
-    </footer>
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url('images/bg_library.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
-    <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-</body>
-</html>
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+li {
+    padding: 1em;
+    /*border-bottom: 1px solid #ccc; */
+}
+
+li p {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 16px 20px;          
+    border-radius: 8px;        
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+li strong {
+    display:block;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 16px;
+    margin: 1%;
+    max-width: fit-content;
+    border-radius: 8px;        
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+li img {
+    width: 300px;
+    height: 450px;
+    transition: transform 0.8s ease;
+    margin-bottom: 2%;
+}
+
+li img:hover {
+    transform: scale(1.03);
+}
+
+.navigation {
+    background: #333;
+    padding: 1em;
+    display: flex;
+}
+
+.navigation a {
+    color:white;
+    margin-right: 1em;
+    text-decoration: none;
+    text-align: center;
+}
+.navigation li:hover {
+    background: #000;
+}
+
+li p {
+    font-size: 24px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+    max-height: fit-content;
+}
+
+li button {
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #333333;
+    color: #ffffff;
+    padding: 1.5%;
+    /* position: fixed; */
+    /* bottom: 50px; */
+}
+
+li button:hover {
+    background: #c7b700;
+    cursor: pointer;
+}
+
+h1 {
+    margin-left: 1%;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    max-width: fit-content;
+    border-radius: 8px;        
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.3);
+}
+
+.close-modal {
+    margin-top: 15px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.close-modal:hover {
+    background-color: #cc0000;
+}
+
+/* Fade-in animation */
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade-out animation */
+
+@keyframes modalFadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+.about-me {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 16px 20px;
+    max-width: 300px;          
+    border-radius: 8px;        
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  align-items: flex-end;
+}
+
+.scroll-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.scroll-container li {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.login-container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+}
+
+.login-form {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+    width: 300px;
+}
+
+.login-form h2 {
+    margin-bottom: 5%;
+}
+
+.login-form input {
+    width: 85%;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+.login-form input:hover {
+    cursor: pointer;
+    border: 1px solid #ab7605;
+}
+
+.login-form button {
+    width: 70%;
+    padding: 10px;
+    background: #333333;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    margin: 10%;
+}
+
+.login-form button:hover {
+    cursor: pointer;
+    background: #c7b700;
+}
