@@ -18,6 +18,11 @@
         </head>
         <body>
             <ul class="navigation">
+                <div class="menu-toggle" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
                 <a href="index.html"><li>Home</li></a>
                 <a href="about.html"><li>About</li></a>
                 <a href="login.html"><li>Login</li></a>
@@ -38,7 +43,12 @@
             </footer>
             <script>
                 document.getElementById("year").textContent = new Date().getFullYear();
+                const menuToggle = document.getElementById("menu-toggle");
+                const nav = document.querySelector(".navigation");
+
+                menuToggle.addEventListener("click", () => {
+                    nav.classList.toggle("active");
+                });
             </script>
         </body>
     </html>
-
