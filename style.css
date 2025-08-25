@@ -1,4 +1,6 @@
 body {
+    display: flex;
+    flex-direction: column;
     background-image: url('images/bg_library.jpg');
     background-attachment: fixed;
     background-size: cover;
@@ -175,11 +177,16 @@ h1 {
     text-align: justify;
 }
 
+main {
+    flex: 1;
+}
+
 footer {
   background: rgba(0, 0, 0, 0.8);
   color: white;
   text-align: center;
   padding: 15px 0;
+  align-items: flex-end;
 }
 
 .scroll-container {
@@ -248,4 +255,3 @@ footer {
     cursor: pointer;
     background: #c7b700;
 }
-
