@@ -271,4 +271,9 @@ footer {
     li {
         padding: 0.5em;
     }
+
+    li p {
+        font-size: 18px;
+    }
 }
+
