@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Simple Book Library">
+    <meta name="keywords" content="Book, Library, Novel">
+    <meta name="author" content="Jetrich Khowanto">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.png">
+    <title>Admin Page</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <ul class="navigation">
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <a href="index.html"><li>Home</li></a>
+        <a href="about.html"><li>About</li></a>
+        <a href="login.html"><li>Login</li></a>
+    </ul>
+    <main>
+        <h1>Welcome!</h1>
+    </main>
+    <footer>
+        <p>Copyright &copy; <span id="year"></span> Jetrich Khowanto - All Rights Reserved -</p>
+    </footer>
+
+    <script>
+
+        const name = new URLSearchParams(window.location.search);
+        const user = name.get("user");
+
+        const heading = document.getElementsByTagName('h1');
+        if(user) {
+            heading[0].textContent = "Welcome "+user+"!";
+        } else {
+            heading[0].textContent = "Welcome!";
+        }
+
+        document.getElementById("year").textContent = new Date().getFullYear();
+        
+        document.getElementById("year").textContent = new Date().getFullYear();
+        const menuToggle = document.getElementById("menu-toggle");
+        const nav = document.querySelector(".navigation");
+
+        menuToggle.addEventListener("click", () => {
+            nav.classList.toggle("active");
+        });
+
+    </script>
+</body>
+</html>
