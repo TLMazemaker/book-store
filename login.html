@@ -18,6 +18,11 @@
 </head>
 <body>
     <ul class="navigation">
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <a href="index.html"><li>Home</li></a>
         <a href="about.html"><li>About</li></a>
         <a href="login.html"><li>Login</li></a>
@@ -26,9 +31,10 @@
         <div class="login-container">
             <form class="login-form">
                 <h2>Login</h2>
-                <input type="text" placeholder="Username" autocomplete="off" required>
-                <input type="password" placeholder="Password" required>
-                <button type="submit">Login</button>
+                <p id="status"></p>
+                <input type="text" id="username" placeholder="Username" autocomplete="off" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button onclick="login()" type="button">Login</button>
             </form>
         </div>
     </main>
@@ -37,7 +43,30 @@
     </footer>
 
     <script>
+        function login() {
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+
+            if(username === "admin" && password === "admin123") {
+                window.open('admin.html?user='+encodeURIComponent(username), '_blank');
+            } else {
+                let status = document.getElementById("status");
+                status.innerHTML="Incorrect Username or Password!";
+                status.style.color="#FF0000";
+                status.style.fontWeight='bold';
+            }
+        }
+
         document.getElementById("year").textContent = new Date().getFullYear();
+        
+        document.getElementById("year").textContent = new Date().getFullYear();
+        const menuToggle = document.getElementById("menu-toggle");
+        const nav = document.querySelector(".navigation");
+
+        menuToggle.addEventListener("click", () => {
+            nav.classList.toggle("active");
+        });
+
     </script>
 </body>
 </html>
