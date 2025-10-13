@@ -338,3 +338,18 @@ footer {
   background-color: #ffffff;
   transform: rotateY(180deg);
 }
+
+#mytable {
+    margin-left: 1%;
+    background-color: transparent;
+    padding: 1%;
+    border: 0;
+    margin-bottom: 1%;;
+}
+
+#mytable th, td {
+    background-color: #ffffff;
+    padding: 1%;
+    width: 1%;
+    border: 1px solid #000000;
+}
