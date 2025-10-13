@@ -29,6 +29,47 @@
     </ul>
     <main>
         <h1>Welcome!</h1>
+        <table id="mytable">
+            <tr>
+                <th>No.</th>
+                <th>Book Title</th>
+                <th>Book Author</th>
+                <th>Book Genre</th>
+                <th>Book Price</th>
+                <th>Book Image</th>
+            </tr>
+        </table>
+        <script>
+            const books = [
+                ["Defenders of Hagron", "Jetrich Khowanto", "Fantasy", "Rp. 200.000", "images/DoH.png"],
+                ["Inhuman", "Jetrich Khowanto", "Horror", "Rp. 350.000", "images/Inhuman.png"],
+                ["The Dangerous Liaison", "Jetrich Khowanto", "Romance", "Rp. 175.000", "images/Romance.png"],
+                ["Diary of a Lucid Dreamer", "Jetrich Khowanto", "Otherworld", "Rp. 200.000", "images/Dream.jpg"],
+                ["The Lovelace Protocol", "Jetrich Khowanto", "Sci-fi", "Rp. 250.000", "images/Scifi.jpg"],
+            ];
+            const table = document.getElementById("mytable");
+
+            for(let i = 0; i < books.length; i++) {
+                const row = document.createElement("tr");
+                const Numcolumn = document.createElement("td");
+                Numcolumn.textContent = i+1;
+                row.appendChild(Numcolumn);
+                
+                for(let j = 0; j < books[i].length; j++) {
+                    const column = document.createElement("td");
+                    if (j === 4) {
+                        const img = document.createElement("img");
+                        img.src = books[i][j];
+                        img.width = 80;
+                        column.appendChild(img);
+                    } else {
+                        column.textContent = books[i][j];
+                    }
+                    row.appendChild(column);
+                }
+                table.appendChild(row);                
+            }
+        </script>
     </main>
     <footer>
         <p>Copyright &copy; <span id="year"></span> Jetrich Khowanto - All Rights Reserved -</p>
@@ -58,5 +99,4 @@
 
     </script>
 </body>
-
 </html>
