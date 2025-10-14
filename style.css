@@ -522,7 +522,7 @@ footer {
         height: 500px;
         perspective: 1000px;
         font-family: sans-serif;
-        margin-right: 5%;
+        margin-right: 10%;
     }
     
     .title {
@@ -551,8 +551,8 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 250px;
-        height: auto;
+        height: fit-content;
+        width: fit-content;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         border: 1px solid #000000;
@@ -568,7 +568,9 @@ footer {
     }
 
     .flip-card-front img {
-        max-width: 500px;
+        width: fit-content;
+        height: 500px;
+        max-width: 300px;
         border-radius: 1rem;
         object-fit: cover;
         display: block;
@@ -577,22 +579,7 @@ footer {
     .flip-card-back {
         background-color: #ffffff;
         transform: rotateY(180deg);
+        padding: 1.5%;
+        height: 500px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
