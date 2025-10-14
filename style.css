@@ -355,6 +355,13 @@ footer {
         font-size: 18px;
     }
 
+    li strong {
+        font-size: 36px;
+        font-family: 'Times New Roman', Times, serif;
+        text-align: left;
+        margin-left: 0%;
+    }
+
     .login-form {
         background: #f9f9f9;
         padding: 20px;
@@ -472,6 +479,13 @@ footer {
         font-size: 18px;
     }
 
+    li strong {
+        font-size: 36px;
+        font-family: 'Times New Roman', Times, serif;
+        text-align: left;
+        margin-left: 0%;
+    }
+
     .login-form {
         background: #f9f9f9;
         padding: 20px;
@@ -570,6 +584,7 @@ footer {
         width: 250px;
     }
 }
+
 
 
 
