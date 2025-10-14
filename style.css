@@ -256,27 +256,6 @@ footer {
     background: #c7b700;
 }
 
-@media (max-width: 768px) {
-    li img {
-        width: 100%;
-        height: auto; 
-        max-width: 250px;
-    }
-
-    ul {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    li {
-        padding: 0.5em;
-    }
-
-    li p {
-        font-size: 18px;
-    }
-}
-
 .flip-card {
   background-color: transparent;
   width: 300px;
@@ -352,4 +331,36 @@ footer {
     padding: 1%;
     width: 1%;
     border: 1px solid #000000;
+    text-align: center;
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    li img {
+        width: 100%;
+        height: auto; 
+        max-width: 250px;
+    }
+
+    ul {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    li {
+        padding: 0.5em;
+    }
+
+    li p {
+        font-size: 18px;
+    }
+
+    .login-form {
+        background: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+        width: 150px;
+    }
 }
