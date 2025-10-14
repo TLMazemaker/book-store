@@ -1,4 +1,4 @@
-body {
+tbody {
     display: flex;
     flex-direction: column;
     background-image: url('images/bg_library.jpg');
@@ -488,7 +488,7 @@ footer {
     }
     
     .flip-card-front img {
-      width: 300px;
+      height: 500px;
       border-radius: 1rem;
     }
     
@@ -497,6 +497,7 @@ footer {
       transform: rotateY(180deg);
     }
 }
+
 
 
 
