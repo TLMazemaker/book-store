@@ -555,7 +555,7 @@ footer {
 
     .flip-card-front img {
         width: fit-content;
-        height: 500px;
+        height: auto;
         max-width: 150px;
         border-radius: 1rem;
         object-fit: cover;
@@ -566,9 +566,11 @@ footer {
         background-color: #ffffff;
         transform: rotateY(180deg);
         padding: 1.5%;
-        height: 500px;
+        height: auto;
+        width: 150px;
     }
 }
+
 
 
 
