@@ -489,8 +489,7 @@ footer {
     }
     
     .flip-card-front img {
-      width: fit-content;
-      height: 100%;
+      width: 300px;
       border-radius: 1rem;
     }
     
@@ -499,6 +498,7 @@ footer {
       transform: rotateY(180deg);
     }
 }
+
 
 
 
