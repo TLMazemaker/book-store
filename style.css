@@ -361,7 +361,28 @@ footer {
         border-radius: 10px;
         text-align: center;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
-        width: 150px;
+        width: 250px;
+    }
+
+    #mytable {
+        margin-left: 1%;
+        background-color: transparent;
+        padding: 1%;
+        border: 0;
+        margin-bottom: 1%;;
+    }
+
+    #mytable th, td {
+        background-color: #ffffff;
+        padding: 1%;
+        width: 1%;
+        border: 1px solid #000000;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    #mytable td img {
+        width:5dvb;
     }
 }
 
@@ -393,5 +414,25 @@ footer {
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
         width: 300px;
     }
-}
 
+    #mytable {
+        margin-left: 1%;
+        background-color: transparent;
+        padding: 1%;
+        border: 0;
+        margin-bottom: 1%;;
+    }
+
+    #mytable th, td {
+        background-color: #ffffff;
+        padding: 1%;
+        width: 1%;
+        border: 1px solid #000000;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    #mytable td img {
+        width: 5dvb;
+    }
+}
