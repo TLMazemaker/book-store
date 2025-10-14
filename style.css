@@ -364,3 +364,33 @@ footer {
         width: 150px;
     }
 }
+
+@media (max-width: 600px) {
+    li img {
+        width: 100%;
+        height: auto; 
+        max-width: 250px;
+    }
+
+    ul {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    li {
+        padding: 0.5em;
+    }
+
+    li p {
+        font-size: 18px;
+    }
+
+    .login-form {
+        background: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+        width: 250px;
+    }
+}
