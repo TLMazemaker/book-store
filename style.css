@@ -579,11 +579,11 @@ footer {
     .flip-card-back {
         background-color: #ffffff;
         transform: rotateY(180deg);
-        padding: 1.5%;
         height: auto;
         width: 250px;
     }
 }
+
 
 
 
