@@ -460,7 +460,7 @@ footer {
     }
 
     ul {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
 
@@ -569,5 +569,6 @@ footer {
         height: 500px;
     }
 }
+
 
 
