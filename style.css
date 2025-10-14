@@ -554,7 +554,7 @@ footer {
     }
 
     .flip-card-front img {
-        width: auto;
+        width: 250px;
         height: 500px;
         max-width: 500px;
         border-radius: 1rem;
@@ -570,6 +570,7 @@ footer {
         width: auto;
     }
 }
+
 
 
 
