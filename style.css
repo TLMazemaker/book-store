@@ -1,4 +1,4 @@
-tbody {
+body {
     display: flex;
     flex-direction: column;
     background-image: url('images/bg_library.jpg');
