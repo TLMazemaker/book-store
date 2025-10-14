@@ -551,8 +551,8 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height: fit-content;
-        width: fit-content;
+        width: 250px;
+        height: auto;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         border: 1px solid #000000;
@@ -568,8 +568,6 @@ footer {
     }
 
     .flip-card-front img {
-        width: 250px;
-        height: auto;
         max-width: 500px;
         border-radius: 1rem;
         object-fit: cover;
@@ -579,10 +577,9 @@ footer {
     .flip-card-back {
         background-color: #ffffff;
         transform: rotateY(180deg);
-        height: auto;
-        width: 250px;
     }
 }
+
 
 
 
