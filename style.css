@@ -430,9 +430,11 @@ footer {
         border: 1px solid #000000;
         text-align: center;
         vertical-align: middle;
+        font-size: 12px;
     }
 
     #mytable td img {
         width: 5dvb;
     }
 }
+
