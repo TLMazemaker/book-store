@@ -488,7 +488,9 @@ footer {
     
     .flip-card-front img {
       height: 100%;
+      width: 100%;
       border-radius: 1rem;
+      object-fit: cover;
     }
     
     .flip-card-back {
@@ -496,6 +498,7 @@ footer {
       transform: rotateY(180deg);
     }
 }
+
 
 
 
