@@ -256,6 +256,20 @@ footer {
     background: #c7b700;
 }
 
+select {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+select:focus {
+    border-color: #007bff;
+}
+
 .flip-card {
   background-color: transparent;
   width: 300px;
@@ -286,17 +300,17 @@ footer {
 }
 
 .flip-card-front, .flip-card-back {
-  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  border: 1px solid #000000;
-  border-radius: 1rem;
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid #000000;
+    border-radius: 1rem;
 }
 
 .description, .quote {
@@ -333,6 +347,30 @@ footer {
     border: 1px solid #000000;
     text-align: center;
     vertical-align: middle;
+}
+
+#mytable button {
+    padding: 2.5%;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 1%;
+}
+
+#mytable button:hover {
+    cursor: pointer;
+}
+
+.rating-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.rating-options span {
+    color: #cccccc;
+    transition: color 0.2s;
 }
 
 @media (max-width: 768px) {
