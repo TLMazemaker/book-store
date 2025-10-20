@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="description" content="Simple Book Library">
+        <meta name="keywords" content="Book, Library, Novel">
+        <meta name="author" content="Jetrich Khowanto">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="images/logo.png">
+        <title>Rate this book</title>
+</head>
+<body>
+    <ul class="navigation">
+        <a href="index.html"><li>Home</li></a>
+        <a href="about.html"><li>About</li></a>
+        <a href="login.html"><li>Login</li></a>
+    </ul>
+
+    <main>
+        <div class="login-container">
+            <form id="rating-form" class="login-form" onsubmit="show_rating(event)">
+            <h2>Rating</h2>
+            <p id="status"></p>
+
+            <input type="text" id="name" placeholder="Please Enter your name" autocomplete="off" required>
+            <input type="email" id="email" placeholder="Please Enter your email" autocomplete="off" required>
+            
+            <strong>Choose the Book title</strong>
+            <select id="book-title" required>
+                <option value="">--- Select a Book ---</option>
+                <option value="Defenders of Hagron">Defenders of Hagron</option>
+                <option value="Inhuman">Inhuman</option>
+                <option value="The Dangerous Liaison">The Dangerous Liaison</option>
+                <option value="Diary of a Lucid Dreamer">Diary of a Lucid Dreamer</option>
+                <option value="The Lovelace Protocol">The Lovelace Protocol</option>
+            </select>
+            <br>
+            <strong>On a scale of 1-5, how would you rate this book?</strong>
+            <div class="rating-options" id="starRating">
+                <span data-value="1">★</span>
+                <span data-value="2">★</span>
+                <span data-value="3">★</span>
+                <span data-value="4">★</span>
+                <span data-value="5">★</span>
+            </div>
+
+            <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright &copy; <span id="year"></span> Jetrich Khowanto - All Rights Reserved -</p>
+    </footer>
+
+    <script>
+        let selectedRating = 0;
+        const stars = document.querySelectorAll("#starRating span");
+
+        stars.forEach(star => {
+        star.addEventListener("mouseover", () => {
+            resetStars();
+            star.style.color = "gold";
+            let prev = star.previousElementSibling;
+            while (prev) {
+            prev.style.color = "gold";
+            prev = prev.previousElementSibling;
+            }
+        });
+
+        star.addEventListener("mouseout", () => {
+            updateStars();
+        });
+
+        star.addEventListener("click", () => {
+            selectedRating = star.getAttribute("data-value");
+            updateStars();
+        });
+        });
+
+        function resetStars() {
+        stars.forEach(s => s.style.color = "#ccc");
+        }
+
+        function updateStars() {
+        resetStars();
+        stars.forEach(s => {
+            if (parseInt(s.dataset.value) <= selectedRating) {
+            s.style.color = "gold";
+            }
+        });
+        }
+
+        function show_rating(event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const book = document.getElementById("book-title").value;
+        const status = document.getElementById("status");
+
+        if (name && email && selectedRating > 0) {
+            const bookTitle = document.querySelector(`#book-title option[value='${book}']`).textContent;
+            status.innerHTML = `Thank you, <strong>${name}</strong>!<br>You rated <strong>${bookTitle}</strong> with rating: <strong>${selectedRating} ★</strong>`;
+            status.style.color = "green";
+            
+        } else {
+            alert("Please fill out all fields and choose a rating.")
+            status.innerHTML = "";
+        }
+        }
+
+        let form = document.getElementById("rating-form");
+        form.addEventListener("keydown", function(event){
+        if(event.key === "Enter") {
+            event.preventDefault();
+            show_rating(event);
+        }
+        });
+
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
