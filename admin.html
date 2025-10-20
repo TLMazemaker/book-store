@@ -37,6 +37,7 @@
                 <th>Book Genre</th>
                 <th>Book Price</th>
                 <th>Book Image</th>
+                <th>Actions</th>
             </tr>
         </table>
         <script>
@@ -57,16 +58,30 @@
                 
                 for(let j = 0; j < books[i].length; j++) {
                     const column = document.createElement("td");
+                    
                     if (j === 4) {
                         const img = document.createElement("img");
                         img.src = books[i][j];
                         img.width = 80;
+                        
                         column.appendChild(img);
                     } else {
                         column.textContent = books[i][j];
                     }
                     row.appendChild(column);
                 }
+                const buttonColumn = document.createElement("td");
+                const editButton = document.createElement("button");
+                editButton.classList.add("edit");
+                editButton.textContent = "Edit";
+                editButton.style.backgroundColor = "#FFFF00";
+                const deleteButton = document.createElement("button");
+                deleteButton.textContent = "Delete";
+                deleteButton.style.backgroundColor = "#FF0000";
+                deleteButton.classList.add("delete");
+                buttonColumn.appendChild(editButton);
+                buttonColumn.appendChild(deleteButton);
+                row.appendChild(buttonColumn);
                 table.appendChild(row);                
             }
         </script>
